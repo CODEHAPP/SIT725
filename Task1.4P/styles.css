@@ -1,0 +1,40 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004d40;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.row {
+    margin: 0;
+}
