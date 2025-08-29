@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.io Demo</title>
+</head>
+<body>
+  <h1 id="heading">Hello!</h1>
+  <input id="msgInput" placeholder="Type a message" />
+  <button onclick="sendMessage()">Send</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    // Listen for messages from server
+    socket.on('message', (msg) => {
+      document.getElementById('heading').innerText = msg;
+    });
+
+    function sendMessage() {
+      const msg = document.getElementById('msgInput').value;
+      socket.emit('message', msg);
+      document.getElementById('msgInput').value = '';
+    }
+  </script>
+</body>
+</html>
